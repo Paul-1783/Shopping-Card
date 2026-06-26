@@ -1,4 +1,4 @@
 
 export function Navbar() {
-    return <h1>NAV</h1>
+    return <h1>SHOP</h1>
 }
