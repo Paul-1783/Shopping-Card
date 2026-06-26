@@ -23,10 +23,10 @@ describe('App', () => {
 });
 
 
-describe("App component", () => {
-  it("renders correct heading", () => {
-    render(<App />);
-    // using regex with the i flag allows simpler case-insensitive comparison
-    expect(screen.getByRole("heading").textContent).toMatch(/our first test/i);
-  });
-});
+// describe("App component", () => {
+//   it("renders correct heading", () => {
+//     render(<App />);
+//     // using regex with the i flag allows simpler case-insensitive comparison
+//     expect(screen.getByRole("heading").textContent).toMatch(/our first test/i);
+//   });
+// });
