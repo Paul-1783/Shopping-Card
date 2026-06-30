@@ -11,6 +11,22 @@ describe("navbar features" , () => {
         expect(navHeader).toBeInTheDocument();
     })
 
-    it("")
+    it("verifies Home btn works", () => {
+        render(<Navbar/>)
+        const homeBtn = screen.getByText("HOME")
+        expect(homeBtn).toBeInTheDocument()
+    })
+
+    it("verifies Shop btn works", () => {
+        render(<Navbar/>)
+        const shopBtn = screen.getByText("SHOP")
+        expect(shopBtn).toBeInTheDocument()    
+    })
+
+    it("verifies Checkout btn works", () => {
+        render(<Navbar/>)
+        const checkoutBtn = screen.getByText("CHECKOUT")
+        expect(checkoutBtn).toBeInTheDocument()    
+    })
 
 })
