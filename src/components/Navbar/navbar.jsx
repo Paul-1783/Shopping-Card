@@ -1,4 +1,9 @@
 
 export function Navbar() {
-    return <h1>SHOP</h1>
+    return <div className="navbar">
+        <h1>PAWNSHOP</h1>
+        <button className="nav-btn">HOME</button>
+        <button className="nav-btn">SHOP</button>
+        <button className="nav-btn">CHECKOUT</button>
+    </div>
 }
