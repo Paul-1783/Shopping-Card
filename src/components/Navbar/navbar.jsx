@@ -1,9 +1,10 @@
+import { Link } from "react-router";
 
 export function Navbar() {
     return <div className="navbar">
         <h1>PAWNSHOP</h1>
-        <button className="nav-btn">HOME</button>
-        <button className="nav-btn">SHOP</button>
-        <button className="nav-btn">CHECKOUT</button>
+        <Link className="nav-btn" to="./../Home/home">HOME</Link>
+        <Link className="nav-btn" to="./../Shop/shop">SHOP</Link>
+        <Link className="nav-btn" to="./../Checkout/checkout">CHECKOUT</Link>
     </div>
 }
