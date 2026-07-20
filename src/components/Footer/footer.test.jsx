@@ -5,7 +5,7 @@ import { MemoryRouter } from 'react-router'
 
 describe("footer features" , () => {
     
-    it("footer is reachable", ()=>{
+    it("is reachable", ()=>{
         render(<MemoryRouter>
               <Footer/>
         </MemoryRouter>)
