@@ -6,9 +6,10 @@ import { Slider } from "./Slider";
 
 describe("Slider component", () =>{
     it("produces images",() => {
-        render(<Slider />)
-        expect(screen.getByRole("header-slider").textContent).toMatch(/radical rhinos/i);
-    })
+        const { getByAltText } = render(<Slider />)
+        const image = getByAltText("backpack picture 1")
+        expect(image).toHaveAttribute('src', './../../assets/backpack/1.jpg')
+     })
 
     // it("shows left image after button click", () =>{
     //     const {container} = render(<Slider />)
