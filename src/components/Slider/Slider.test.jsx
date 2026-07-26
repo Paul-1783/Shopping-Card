@@ -1,7 +1,7 @@
 
 import { describe, it, expect } from "vitest";
-import { render, screen } from "@testing-library/react";
-// import userEvent from "@testing-library/user-event";
+import { render, screen} from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import { Slider } from "./Slider";
 
 describe("Slider component", () =>{
@@ -11,12 +11,13 @@ describe("Slider component", () =>{
         expect(image).toHaveAttribute('src', './../../assets/backpack/1.jpg')
      })
 
-    // it("shows left image after button click", () =>{
-    //     const {container} = render(<Slider />)
-    //     const leftBtn = screen.getByRole("left-btn", { name: "<" });
+    it("shows left image after button click", async () =>{
+        const user = userEvent.setup();
 
-    //     expect(screen.getByRole("rightBtn").textContent).toMatch(/>/i);
-    // })
+        render(<Slider />)
+        const leftBtn = screen.getByPlaceholderText("slider scrolls left" );
+        await user.click(leftBtn);
+     })
         
     // it("reaches right image after button ", () =>{
     //     const {container} = render(<Slider />)
