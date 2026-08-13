@@ -8,23 +8,31 @@ describe("Slider component", () => {
 
     it("produces images", () => {
         const { getByAltText } = render(<Slider />)
-        const image = getByAltText("backpack picture 1")
-        expect(image).toHaveAttribute('src', './../../assets/backpack/1.jpg')
+        const image = getByAltText("backpack picture 10")
+        expect(image).toHaveAttribute('src', '/assets/backpack/10.jpg')
      })
 
     it("shows left image after button click", async () => {
         const user = userEvent.setup();
-
-        render(<Slider />)
+        const { getByAltText } = render(<Slider />)
         
-        const leftBtn = screen.getByPlaceholderText("slider scrolls left");
+        const leftBtn = screen.getByTestId("slider scrolls left");
         await user.click(leftBtn);
+
+        const image = getByAltText("backpack picture 9")
+        expect(image).toHaveAttribute('alt', 'backpack picture 9')
+
     })
         
-    // it("reaches right image after button ", () => {
-    //     const {container} = render(<Slider />)
-    //     const rightBtn = screen.getByRole("right-btn", { name: ">" });
-    //     expect(screen.getByRole("rightBtn").textContent).toMatch(/>/i);
-    // })
+    it("reaches right image after button ", async () => {
+        const user = userEvent.setup();
+        const { getByAltText } = render(<Slider />)
+        
+        const rightBtn = screen.getByTestId("slider scrolls right");
+        await user.click(rightBtn);
+
+        const image = getByAltText("backpack picture 11")
+        expect(image).toHaveAttribute('alt', 'backpack picture 11')
+    })
 
 })

@@ -19,7 +19,7 @@ export function Slider() {
 
     return (
         <div className="slider">
-            <button className="left-btn" placeholder="slider scrolls left"  onClick={() => handleClick("left")}>
+            <button className="left-btn" data-testid="slider scrolls left"  onClick={() => handleClick("left")}>
                 <img src="/assets/chevron-left.svg" alt="arrow left picture" />
             </button>
 
@@ -54,7 +54,7 @@ export function Slider() {
                  }
             </div>
             
-            <button className="right-btn" placeholder="slider scrolls right" onClick={() => handleClick("right")}>
+            <button className="right-btn" data-testid="slider scrolls right" onClick={() => handleClick("right")}>
                 <img src="/assets/chevron-right.svg" alt="arrow right picture" />
             </button>
         </ div>
