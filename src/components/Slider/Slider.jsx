@@ -7,12 +7,15 @@ export function Slider() {
 
     let imageObjs = loadSliderImages()
 
+    console.log("active slide ", activeSlide)
+    console.log(imageObjs[imageObjs.key=activeSlide])
+    
     const handleClick = (orientation) => {
-        if(orientation === "right" && activeSlide < 19)
-            setActiveSlide(slideNr => ((slideNr+1)%19))
-        else if(orientation === "left" && activeSlide > 0)
-            setActiveSlide(slideNr => slideNr-1)
-    }
+        if(orientation === "right" )
+            setActiveSlide(slideNr => ((slideNr+1)%20))
+        else 
+            activeSlide === 0 ? setActiveSlide(19) : setActiveSlide(slideNr => slideNr-1)
+     }
 
     return (
         <div className="slider">
@@ -21,14 +24,28 @@ export function Slider() {
             </button>
 
             <div className="container-slider-img">           
-                {imageObjs.map(image => 
+                {/* {imageObjs.map(image => 
                         <img key={image.key} src={image.source} alt={image.alternative} 
                         className={`img-default  
                             ${activeSlide === image.key ? "active" :
                             image.key === 19 && activeSlide === 0 || activeSlide === image.key - 1 || activeSlide === image.key + 1 
                             ? "semiActive" : "inActive"}`}
                         />
-                )}
+                )} */}
+                 {
+                      <img
+                      key={imageObjs[imageObjs.key=activeSlide].key} 
+                      src={imageObjs[imageObjs.key=activeSlide].source} 
+                      alt={imageObjs[imageObjs.key=activeSlide].alternative} 
+                        className={`img-default  
+                            ${activeSlide === imageObjs[imageObjs.key=activeSlide].key ? "active" :
+                            imageObjs[imageObjs.key=activeSlide].key === 19
+                            && activeSlide === 0 
+                            || activeSlide === imageObjs[imageObjs.key=activeSlide].key - 1 
+                            || activeSlide === imageObjs[imageObjs.key=activeSlide].key + 1 
+                            ? "semiActive" : "inActive"}`}
+                        />
+                 }
             </div>
             
             <button className="right-btn" placeholder="slider scrolls right" onClick={() => handleClick("right")}>
