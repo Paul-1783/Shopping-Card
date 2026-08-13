@@ -9,9 +9,6 @@ export function Slider() {
 
     let prevBag = activeSlide === 0 ? 19 : activeSlide - 1;
     let nextBag = activeSlide === 19 ?  0 : activeSlide + 1;
-
-    console.log("active slide ", activeSlide)
-    console.log(imageObjs[imageObjs.key=activeSlide])
     
     const handleClick = (orientation) => {
         if(orientation === "right" )
@@ -27,15 +24,6 @@ export function Slider() {
             </button>
 
             <div className="container-slider-img">           
-                {/* {imageObjs.map(image => 
-                        <img key={image.key} src={image.source} alt={image.alternative} 
-                        className={`img-default  
-                            ${activeSlide === image.key ? "active" :
-                            image.key === 19 && activeSlide === 0 || activeSlide === image.key - 1 || activeSlide === image.key + 1 
-                            ? "semiActive" : "inActive"}`}
-                        />
-                )} */}
-
                  {
                       <img
                       key={imageObjs[imageObjs.key=prevBag].key} 
@@ -56,7 +44,6 @@ export function Slider() {
                         
                  }
 
-
                  {
                       <img
                       key={imageObjs[imageObjs.key=nextBag].key} 
@@ -65,9 +52,6 @@ export function Slider() {
                         className={`img-default semiActive }`}
                         />
                  }
-
-
-
             </div>
             
             <button className="right-btn" placeholder="slider scrolls right" onClick={() => handleClick("right")}>
