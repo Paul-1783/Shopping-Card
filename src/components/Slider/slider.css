@@ -23,8 +23,12 @@
    max-height: 210px;
  }
 
+ .active {
+   box-shadow: 1px -1px 4px 5px white;
+ }
+
  .semiActive {
-   opacity: 0.5;
+   opacity: 0.4;
  }
 
  .inActive {

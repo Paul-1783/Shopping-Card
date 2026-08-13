@@ -7,6 +7,9 @@ export function Slider() {
 
     let imageObjs = loadSliderImages()
 
+    let prevBag = activeSlide === 0 ? 19 : activeSlide - 1;
+    let nextBag = activeSlide === 19 ?  0 : activeSlide + 1;
+
     console.log("active slide ", activeSlide)
     console.log(imageObjs[imageObjs.key=activeSlide])
     
@@ -32,20 +35,39 @@ export function Slider() {
                             ? "semiActive" : "inActive"}`}
                         />
                 )} */}
+
+                 {
+                      <img
+                      key={imageObjs[imageObjs.key=prevBag].key} 
+                      src={imageObjs[imageObjs.key=prevBag].source} 
+                      alt={imageObjs[imageObjs.key=prevBag].alternative} 
+                        className={`img-default semiActive }`}
+                        />
+                 }
+
                  {
                       <img
                       key={imageObjs[imageObjs.key=activeSlide].key} 
                       src={imageObjs[imageObjs.key=activeSlide].source} 
                       alt={imageObjs[imageObjs.key=activeSlide].alternative} 
-                        className={`img-default  
-                            ${activeSlide === imageObjs[imageObjs.key=activeSlide].key ? "active" :
-                            imageObjs[imageObjs.key=activeSlide].key === 19
-                            && activeSlide === 0 
-                            || activeSlide === imageObjs[imageObjs.key=activeSlide].key - 1 
-                            || activeSlide === imageObjs[imageObjs.key=activeSlide].key + 1 
-                            ? "semiActive" : "inActive"}`}
+                        className={`img-default active`}
+                        />
+
+                        
+                 }
+
+
+                 {
+                      <img
+                      key={imageObjs[imageObjs.key=nextBag].key} 
+                      src={imageObjs[imageObjs.key=nextBag].source} 
+                      alt={imageObjs[imageObjs.key=nextBag].alternative} 
+                        className={`img-default semiActive }`}
                         />
                  }
+
+
+
             </div>
             
             <button className="right-btn" placeholder="slider scrolls right" onClick={() => handleClick("right")}>
