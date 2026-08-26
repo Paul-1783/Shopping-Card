@@ -4,7 +4,9 @@ export function Navbar() {
     return <div className="navbar">
         <h1>PAWNSHOP</h1>
         <Link className="nav-btn" to="./../Home/home">HOME</Link>
+        <br/>
         <Link className="nav-btn" to="./../Shop/shop">SHOP</Link>
+        <br/>
         <Link className="nav-btn" to="./../Checkout/checkout">CHECKOUT</Link>
     </div>
 }
