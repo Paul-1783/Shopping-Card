@@ -1,6 +1,6 @@
-import { Searchbar } from "./searchbar";
+import { Searchbar } from "./searchbar.jsx";
 import { describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import userEvent from "@testing-library/user-event";
 
 
@@ -9,7 +9,9 @@ describe('searchbar', () => {
     it('presents products with grid layout', async () => {
         const user = userEvent.setup();
         
-        render(<Searchbar/>)
+        const setRowView = () => {}
+
+        render(<Searchbar setRowView={setRowView}/>);
         
         const gridBtn = screen.getByTestId("creates grid layout");
         await user.click(gridBtn);
@@ -18,19 +20,27 @@ describe('searchbar', () => {
     it('presents products with row layout', async () => {
         const user = userEvent.setup();
      
-        render(<Searchbar/>)
+        const setRowView = () => {}
+
+        render(<Searchbar setRowView={setRowView}/>);
 
         const rowBtn = screen.getByTestId("creates row layout");
         await user.click(rowBtn);
     })
 
-    it('contains an input field for search', () => {
+    it('enters into  and clears the input field', async () => {
         const user = userEvent.setup();
-     
-        render(<Searchbar/>)
 
-        const searchInput = screen.getByRole("search");
-        expect(searchInput).toHaveAttribute('placeholder', 'Search...');
+        render(<Searchbar/>);
+    
+        const searchInput = screen.getByTestId("search-input");
+
+        await user.type(searchInput, 'new');
+        expect(searchInput).toHaveValue("new");
+
+        await user.clear(searchInput)
+        
+        expect(searchInput).toHaveValue('');
     })
 
     it('clears the input field', async () => {
@@ -38,31 +48,34 @@ describe('searchbar', () => {
 
         render(<Searchbar/>);
     
-        const searchInput = screen.getByTestId("testme");
+        const searchInput = screen.getByTestId("search-input");
         const clearBtn = screen.getByTestId("clears search bar");
 
-        user.paste(searchInput, "test")
-
-        const event = new Event('change')
-        searchInput.value = 'test'
-        searchInput.dispatchEvent(event)
-
-        expect(searchInput).toHaveValue("test")
+        await user.type(searchInput, 'new');
+        expect(searchInput).toHaveValue("new");
 
         await user.click(clearBtn);
-        expect(searchInput.textContent).toMatch('');
+
+        expect(searchInput).toHaveValue('');
     })
 
+    
     it('selects backpack type', () => {
-        const user = userEvent.setup()
 
-        render(<Searchbar/>)
+        
+        render(<Searchbar/>);
 
-        const 
+        const backpackType = screen.getByTestId("backpack-type");
+        fireEvent.change(backpackType, { target: { value: 'work' }})
+        expect(backpackType[3].selected).toBeTruthy();
     })
 
     it('sorts backpacks by criteria', () => {
+        render(<Searchbar/>);
 
+        const backpackCriteria = screen.getByTestId("sort-criteria");
+        fireEvent.change(backpackCriteria, { target: { value: 'elegance' }})
+        expect(backpackCriteria[2].selected).toBeTruthy();
     })
 
 })
