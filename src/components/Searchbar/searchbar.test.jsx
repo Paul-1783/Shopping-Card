@@ -28,7 +28,7 @@ describe('searchbar', () => {
         await user.click(rowBtn);
     })
 
-    it('enters into  and clears the input field', async () => {
+    it('enters into and clears the input field', async () => {
         const user = userEvent.setup();
 
         render(<Searchbar/>);
@@ -61,8 +61,6 @@ describe('searchbar', () => {
 
     
     it('selects backpack type', () => {
-
-        
         render(<Searchbar/>);
 
         const backpackType = screen.getByTestId("backpack-type");
