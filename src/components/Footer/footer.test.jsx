@@ -43,7 +43,9 @@ describe("footer features" , () => {
             <Footer/>
         </MemoryRouter>)
 
-        const currentLanguage = screen.getByTestId("language-select")
+        const currentLanguage = screen.getByTestId("language-select");
+        fireEvent.change(currentLanguage, { target: { value: 'spanisch' }})
+        expect(currentLanguage[3].selected).toBeTruthy();
     })
 
     it("selects currency", () => {
@@ -52,6 +54,8 @@ describe("footer features" , () => {
         </MemoryRouter>)
 
         const currentCurrency = screen.getByTestId("currency-select")
+        fireEvent.change(currentCurrency, { target: { value: 'Yen' }})
+        expect(currentCurrency[3].selected).toBeTruthy();  
     })
 
 })
