@@ -14,24 +14,24 @@ describe("Slider component", () => {
 
     it("shows left image after button click", async () => {
         const user = userEvent.setup();
-        const { getByAltText } = render(<Slider />)
+        render(<Slider />)
         
         const leftBtn = screen.getByTestId("slider scrolls left");
         await user.click(leftBtn);
 
-        const image = getByAltText("backpack picture 9")
+        const image = screen.getByTestId("active-img")
         expect(image).toHaveAttribute('alt', 'backpack picture 9')
 
     })
         
     it("reaches right image after button ", async () => {
         const user = userEvent.setup();
-        const { getByAltText } = render(<Slider />)
+        render(<Slider />)
         
         const rightBtn = screen.getByTestId("slider scrolls right");
         await user.click(rightBtn);
 
-        const image = getByAltText("backpack picture 11")
+        const image = screen.getByTestId("active-img")
         expect(image).toHaveAttribute('alt', 'backpack picture 11')
     })
 

@@ -39,6 +39,7 @@ export function Slider() {
                       src={imageObjs[imageObjs.key=activeSlide].source} 
                       alt={imageObjs[imageObjs.key=activeSlide].alternative} 
                         className={`img-default active`}
+                        data-testid="active-img"
                         />
 
                         
