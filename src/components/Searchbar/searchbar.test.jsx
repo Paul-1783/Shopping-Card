@@ -14,7 +14,7 @@ describe('searchbar', () => {
         render(<Searchbar setRowView={setRowView}/>);
         
         const gridBtn = screen.getByTestId("creates grid layout");
-        await user.click(gridBtn);
+        await user.click(gridBtn);                                      //?
     })
 
     it('presents products with row layout', async () => {
@@ -25,7 +25,7 @@ describe('searchbar', () => {
         render(<Searchbar setRowView={setRowView}/>);
 
         const rowBtn = screen.getByTestId("creates row layout");
-        await user.click(rowBtn);
+        await user.click(rowBtn);                                       //?
     })
 
     it('enters into and clears the input field', async () => {

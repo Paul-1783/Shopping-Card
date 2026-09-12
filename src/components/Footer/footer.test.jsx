@@ -27,8 +27,10 @@ describe("footer features" , () => {
         const image = getByAltText("git brand icon")
         expect(image).toHaveAttribute('alt', 'git brand icon')
     })
+})
 
-    it("gets logo loaded", () => {
+describe ("Select section", () => {
+        it("gets logo loaded", () => {
         const { getByAltText } = render(<MemoryRouter>
             <Footer/>
         </MemoryRouter>)
@@ -57,5 +59,20 @@ describe("footer features" , () => {
         fireEvent.change(currentCurrency, { target: { value: 'yen' }})
         expect(currentCurrency[7].selected).toBeTruthy();  
     })
+})
 
+describe('about', () => {
+    it("links to team section", () => {
+
+        const checkAbout = () => {}
+
+        const user = userEvent.setup();
+
+        render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+
+        
+    })
 })
