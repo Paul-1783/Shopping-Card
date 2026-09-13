@@ -23,5 +23,6 @@ describe('intro features', () => {
 
         const image = getByAltText("mountaineer with backpack")
         expect(image).toHaveAttribute('alt', 'mountaineer with backpack')
+        expect(image).toHaveAttribute('src', './assets/mountaineer.jpg')
     })
 })

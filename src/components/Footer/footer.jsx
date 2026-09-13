@@ -57,14 +57,14 @@ export function Footer(){
             </div>
             <div className="ask-specialist">
                 <div>
-                    <h3>ASK A SPECIALIST</h3>
+                    <h3>ASK A RATPACK BACKPACK SPECIALIST</h3>
                     <span>Chat with us</span> <img src="./assets/chat.svg" alt="chat symbol" />
                 </div>
                 <div>
                     <h3>BE PART OF THE RATPACK BACKPACK COMMUNITY</h3>
                     <div>
                         <input type="text" data-testid="email-input"  onChange={inp => setEmailInput(inp.target.value)} value={emailInput} />
-                        <button data-testid="email-submit" onClick={() => {setEmailInput("")}}>Submit</button>
+                        <button data-testid="email-submit" onClick={() => {clearEmailInput()}}>Submit</button>
                     </div>
                 </div>
             </div>
