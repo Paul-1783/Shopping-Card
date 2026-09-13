@@ -62,17 +62,129 @@ describe ("Select section", () => {
 })
 
 describe('about', () => {
-    it("links to team section", () => {
-
-        const checkAbout = () => {}
-
-        const user = userEvent.setup();
-
+    it("links to team section", async () => {
         render(<MemoryRouter>
             <Footer/>
         </MemoryRouter>)
 
+        const teamButton = screen.getByRole( "link", { name: /team/i })
 
+        expect(teamButton).toHaveClass('link-styling')
+        expect(teamButton).toHaveAttribute('href', '/')        //?
+    })
+   
+    it("links to press section", async () => {
+       render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+        const pressButton = screen.getByRole( "link", { name: /press/i })
+
+        expect(pressButton).toHaveClass('link-styling')
+        expect(pressButton).toHaveAttribute('href', '/')        //?
+    })
+
+    it("links to jobs section", async () => {
+        render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+        const jobsButton = screen.getByRole( "link", { name: /jobs/i })
+
+        expect(jobsButton).toHaveClass('link-styling')
+        expect(jobsButton).toHaveAttribute('href', '/')        //?
+    })
+})
+
+describe('help', () => {
+    it("links to FAQ section", () => {
+        render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+        const faqButton = screen.getByRole( "link", { name: /faq/i })
+
+        expect(faqButton).toHaveClass('link-styling')
+        expect(faqButton).toHaveAttribute('href', '/')        //?
+    })
+
+    it("links to contact section", () => {
+        render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+        const contactButton = screen.getByRole( "link", { name: /contact/i })
+
+        expect(contactButton).toHaveClass('link-styling')
+        expect(contactButton).toHaveAttribute('href', '/')        //?
+    })
+
+    it("links to FAQ section", () => {
+        render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+        const warrantButton = screen.getByRole( "link", { name: /warrant/i })
+
+        expect(warrantButton).toHaveClass('link-styling')
+        expect(warrantButton).toHaveAttribute('href', '/')        //?
+    })
+
+    it("links to FAQ section", () => {
+        render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+        const shippingButton = screen.getByRole( "link", { name: /shipping and returns/i })
+
+        expect(shippingButton).toHaveClass('link-styling')
+        expect(shippingButton).toHaveAttribute('href', '/')        //?
+    })
+
+})
+
+describe("interaction", () => {
+    it("renders chat symbol", () => {
+        render(<MemoryRouter>
+            <Footer/>
+        </MemoryRouter>)
+
+        const chatImg = screen.getByAltText("chat symbol")
+        expect(chatImg).toBeInTheDocument();
+    })
+
+    it('enters into and clears the input field', async () => {
+            const user = userEvent.setup();
+    
+            render(<MemoryRouter>
+                <Footer/>
+            </MemoryRouter>)
         
+            const emailInput = screen.getByTestId("email-input");
+    
+            await user.type(emailInput, 'new@new.de');
+            expect(emailInput).toHaveValue("new@new.de");
+    
+            await user.clear(emailInput)
+            
+            expect(emailInput).toHaveValue('');
+    })
+    
+    it('clears the input field by clicking submit button', async () => {
+            const user = userEvent.setup();
+
+            render(<MemoryRouter>
+                <Footer/>
+            </MemoryRouter>)
+                
+            const emailInput = screen.getByTestId("email-input");
+            const emailSubmitBtn = screen.getByTestId("email-submit");
+    
+            await user.type(emailInput, 'new@new.de');
+            expect(emailInput).toHaveValue("new@new.de");
+    
+            await user.click(emailSubmitBtn);
+    
+            expect(emailInput).toHaveValue('');
     })
 })

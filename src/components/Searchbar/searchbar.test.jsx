@@ -43,7 +43,7 @@ describe('searchbar', () => {
         expect(searchInput).toHaveValue('');
     })
 
-    it('clears the input field', async () => {
+    it('clears the input field by clicking clear button', async () => {
         const user = userEvent.setup();
 
         render(<Searchbar/>);

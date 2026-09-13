@@ -1,5 +1,15 @@
  
+import { useState } from "react"
+
 export function Footer(){
+      const [emailInput, setEmailInput] = useState("")
+
+    const clearEmailInput = () => {
+        setEmailInput("")
+    }
+
+
+
     return(
         <>
         <div className="footer-container">
@@ -33,9 +43,31 @@ export function Footer(){
                     <option value="usDollar">$ US Dollar (USD)</option>
                 </select>
             </div>
-            <div className="about"></div>
-            <div className="help"></div>
-            <div className="ask-specialist"></div>
+            <div className="about">
+                <a role="link" className="link-styling" href="/">Team</a>
+                <a role="link" className="link-styling" href="/">Press</a>
+                <a role="link" className="link-styling" href="/">Jobs</a>
+
+            </div>
+            <div className="help">
+                <a role="link" className="link-styling" href="/">FAQ</a>
+                <a role="link" className="link-styling" href="/">Contact</a>
+                <a role="link" className="link-styling" href="/">Warrant</a>
+                <a role="link" className="link-styling" href="/">Shipping and Returns</a>
+            </div>
+            <div className="ask-specialist">
+                <div>
+                    <h3>ASK A SPECIALIST</h3>
+                    <span>Chat with us</span> <img src="./assets/chat.svg" alt="chat symbol" />
+                </div>
+                <div>
+                    <h3>BE PART OF THE RATPACK BACKPACK COMMUNITY</h3>
+                    <div>
+                        <input type="text" data-testid="email-input"  onChange={inp => setEmailInput(inp.target.value)} value={emailInput} />
+                        <button data-testid="email-submit" onClick={() => {setEmailInput("")}}>Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
         <div className="portfolio">
             <h3>Developped By Paul1783</h3>
