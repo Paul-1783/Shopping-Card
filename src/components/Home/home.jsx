@@ -3,9 +3,10 @@ import { Intro } from './../Intro/intro.jsx'
  
  export function Home() {
    return(
-    <div>
+    <>
+          <h1>HOME</h1>
           <Intro/>
           <Slider/>
-    </div>
+    </>
    ) 
  }
