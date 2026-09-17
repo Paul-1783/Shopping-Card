@@ -8,5 +8,7 @@ export function Navbar() {
         <Link className="nav-btn" to="/shop">SHOP</Link>
         <br/>
         <Link className="nav-btn" to="/cart">CHECKOUT</Link>
+        <br/>
+        <Link className="nav-btn" to="/about">ABOUT</Link>
     </div>
 }

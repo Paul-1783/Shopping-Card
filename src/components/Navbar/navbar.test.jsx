@@ -87,4 +87,17 @@ describe("Navbar links testing", () => {
         expect(history.push).toHaveBeenCalledWith('/../Checkout/checkout');  
     })
 
+    it("tests if About button works", async () => {
+        const history = createMemoryHistory();
+
+        history.push = vi.fn();
+        history.push('/../About/about')
+        const { getByText } = render(< MemoryRouter history={history} >
+                < Navbar/>
+            </ MemoryRouter>)
+
+        fireEvent.click(getByText(/^ABOUT?/))
+
+        expect(history.push).toHaveBeenCalledWith('/../About/about');  
+    })
 })

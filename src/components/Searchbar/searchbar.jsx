@@ -2,7 +2,6 @@ import { useState } from "react"
 
 
 export function Searchbar({setRowView}) {
-   
     const [searchInput, setSearchInput] = useState("")
 
     const clearSearchbar = () => {
@@ -11,7 +10,7 @@ export function Searchbar({setRowView}) {
 
     return (
         <>
-        <div className="search-header">
+        <div className="search-header" data-testid="searchbar-container">
             <div className="input-panel">
                 <button data-testid="creates grid layout"
                     onClick={() => {setRowView("false")}}
