@@ -18,4 +18,11 @@ describe('shop', () => {
       const itemContainer = screen.getByTestId("item-container");
       expect(itemContainer).toBeInTheDocument();
    })
+
+   // it("loads all products into programm", () => { 
+   //    render(<Shop/>);
+      
+   //    // const allProducts = ;
+   //    expect(allProducts.length).toBe(20);
+   // })
 })
