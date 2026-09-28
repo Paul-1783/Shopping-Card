@@ -4,8 +4,8 @@ import App from './App';
 import { MemoryRouter } from 'react-router';
 import { BackpackProvider }from './context/BackpackProvider.jsx'
 import { BackpackContext }from './context/BackpackContext.jsx'
-
 import { useContext } from 'react';
+
 
 
 
@@ -27,11 +27,11 @@ describe('App', () => {
   it('loads product data', () => {
 
     const BackpackTest = () => {
-      const { name } = useContext(BackpackContext);
+      const { loadedBackpackInfo } = useContext(BackpackContext);
 
       return (
         <div data-testid="backpack-context">
-         {name}
+         {loadedBackpackInfo[19].id}
         </div>
       );
     };
@@ -45,8 +45,8 @@ describe('App', () => {
     </MemoryRouter>
     );
 
-    const name = screen.getByTestId("backpack-context");
-    expect(name).toHaveTextContent("testback")
+    const idLoaded = screen.getByTestId("backpack-context").textContent
+    expect(idLoaded).toBe("19")
   })
 
 });

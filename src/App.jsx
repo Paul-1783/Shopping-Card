@@ -8,20 +8,25 @@ import { Shop } from './components/Shop/shop.jsx'
 import { Cart } from './components/Cart/cart.jsx'
 import { NotFound } from './components/NotFound/notFound.jsx'
 import { About } from './components/About/about.jsx'
+import { CardExtended } from './components/CardExtended/cardExtended.jsx'
+import { BackpackProvider } from './context/BackpackProvider.jsx' 
 
 function App() {
   return (
-    <div className="container-global">
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home/>}></Route>
-        <Route path="/shop" element={<Shop/>}></Route>
-        <Route path="/cart" element={<Cart/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
-        <Route path="*" element={<NotFound/>}></Route>
-      </Routes>
-      <Footer/> 
-    </div>
+    <BackpackProvider>
+        <div className="container-global">
+          <Navbar/>
+          <Routes>
+            <Route path="/" element={<Home/>}></Route>
+            <Route path="/shop" element={<Shop/>}></Route>
+            <Route path="/cart" element={<Cart/>}></Route>
+            <Route path="/about" element={<About/>}></Route>
+            <Route path="/card_extended" element={<CardExtended/>}></Route>
+            <Route path="*" element={<NotFound/>}></Route>
+          </Routes>
+          <Footer/> 
+        </div>
+      </BackpackProvider>
   )
 }
 

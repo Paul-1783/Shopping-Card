@@ -37,7 +37,7 @@ describe ("Select section", () => {
 
         const logoIcon =  getByAltText("ratpack enterprise logo");
 
-         expect(logoIcon).toHaveAttribute('src', './assets/rodent.svg')
+        expect(logoIcon).toHaveAttribute('src', './assets/rodent.svg')
     })
 
     it("selects language", () => {
