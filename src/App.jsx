@@ -12,6 +12,7 @@ import { CardExtended } from './components/CardExtended/cardExtended.jsx'
 import { BackpackProvider } from './context/BackpackProvider.jsx' 
 
 function App() {
+
   return (
     <BackpackProvider>
         <div className="container-global">
