@@ -13,7 +13,8 @@ export function Shop() {
             <Searchbar setRowView={searchTest} />
             <h1>SHOP</h1>
             <div data-testid="item-container" className="item-container">{loadedBackpackInfo.map(product =>
-                <Card key={product.id} product={{ "id": product.id, "title": product.title, "price": product.price, "image": product.img }} />
+                <Card key={product.id} 
+                product={{ "id": product.id, "title": product.title, "price": product.price, "image": product.img }} />
             )}
             </div>
         </>
