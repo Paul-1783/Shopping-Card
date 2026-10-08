@@ -24,7 +24,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home currentOrder={currentOrder} />}></Route>
             <Route path="/shop" element={<Shop currentOrder={currentOrder} />}></Route>
-            <Route path="/cart" element={<Cart currentOrder={currentOrder} />}></Route>
+            <Route path="/cart" element={<Cart currentOrder={currentOrder}  setCurrentOrder={setCurrentOrder} />}></Route>
             <Route path="/about" element={<About currentOrder={currentOrder} />}></Route>
             <Route path="/card_extended" element={<CardExtended currentOrder={currentOrder} setCurrentOrder={setCurrentOrder} />}></Route>
             <Route path="*" element={<NotFound/>}></Route>

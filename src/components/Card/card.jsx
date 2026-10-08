@@ -5,7 +5,7 @@ export function Card({product}) {
     const id = product.id; 
     const title = product.title;
     const price =product.price ;
-    const image= product.image;
+    const image = product.image;
      
 
  
