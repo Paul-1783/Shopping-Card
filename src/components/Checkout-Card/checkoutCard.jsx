@@ -1,23 +1,16 @@
 import { changeAmount } from "../../utils/changeAmount";
 import { enterAmount } from "../../utils/enterAmount";
-import { useLocation } from "react-router";
-import { useContext } from "react";
-import { BackpackContext } from "../../context/BackpackContext";
+import "./checkoutCard.css"
 
-export function CheckoutCard({ currentOrder, setCurrentOrder }) {
+export function CheckoutCard({ currentOrder, setCurrentOrder, IndexOrderToChange, oneOrder }) {
+    
+    console.log("CheckoutCard   ONE ORDER  ", oneOrder)
 
-    const { loadedBackpackInfo } = useContext(BackpackContext);
-    const location = useLocation();
-    const index = location.state.index;
-    const details = loadedBackpackInfo[index];
-    let IndexOrderToChange = currentOrder.findIndex(backpack => backpack.id === index);
-
-    const id = currentOrder.id;
-    const title = currentOrder.title;
-    const price = currentOrder.price;
-    const image = currentOrder.image;
-    let amount = currentOrder.amount;
-
+    const id = oneOrder.id;
+    const title = oneOrder.title;
+    const price = oneOrder.price;
+    const image = oneOrder.image;
+ 
     return (
         <div className="checkoutCard">
             <span>{id}</span>
@@ -28,8 +21,8 @@ export function CheckoutCard({ currentOrder, setCurrentOrder }) {
                 <button className="amount-btn" onClick={() => { changeAmount("+", {id, title, price, image}, IndexOrderToChange, currentOrder, setCurrentOrder) }} >+</button>
                 <input type="text" name="amount" id="amount"
                     value={IndexOrderToChange === -1 ? 0 : currentOrder[IndexOrderToChange].amount}
-                    onChange={e => enterAmount(e.target.value, details, IndexOrderToChange, currentOrder, setCurrentOrder)} />
-                <button className="amount-btn" onClick={() => { changeAmount("-", details, IndexOrderToChange, currentOrder, setCurrentOrder) }}>-</button>
+                    onChange={e => enterAmount(e.target.value, oneOrder, IndexOrderToChange, currentOrder, setCurrentOrder)} />
+                <button className="amount-btn" onClick={() => { changeAmount("-", oneOrder, IndexOrderToChange, currentOrder, setCurrentOrder) }}>-</button>
             </p>
         </div>
     )
