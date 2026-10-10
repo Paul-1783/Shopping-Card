@@ -5,12 +5,16 @@ import { changeAmount } from "../../utils/changeAmount";
 import { enterAmount } from "../../utils/enterAmount";
 
 export function CardExtended({ currentOrder, setCurrentOrder }) {
+    
+    console.log("CardExtended VOR IndexOrderToChange ", currentOrder)
 
     const { loadedBackpackInfo } = useContext(BackpackContext);
     const location = useLocation();
     const index = location.state.index;
     const details = loadedBackpackInfo[index];
     let IndexOrderToChange = currentOrder.findIndex(backpack => backpack.id === index);
+
+    console.log("CardExtended   CURRENTORDER ", currentOrder    )
 
     return (
         <>
@@ -36,7 +40,7 @@ export function CardExtended({ currentOrder, setCurrentOrder }) {
                     <span>Color:  </span>{details.features.color}
                 </p>
                 <p className="amount-section">
-                    <button className="amount-btn" onClick={() => { changeAmount("+", details, IndexOrderToChange, currentOrder, setCurrentOrder) }} >+</button>
+                    <button className="amount-btn" onClick={() => { changeAmount("+", details, IndexOrderToChange, currentOrder, setCurrentOrder) }}>+</button>
                     <input type="text" name="amount" id="amount"
                         value={IndexOrderToChange === -1 ? 0 : currentOrder[IndexOrderToChange].amount}
                         onChange={e => enterAmount(e.target.value, details, IndexOrderToChange, currentOrder, setCurrentOrder)} />
