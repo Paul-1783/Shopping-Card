@@ -15,7 +15,7 @@ import { useState } from 'react'
 function App() {
 
   const [currentOrder, setCurrentOrder] = useState([])
-    console.log("App CURRENTORDER ", currentOrder)
+  console.log("App CURRENTORDER ", currentOrder)
 
   return (
     <BackpackProvider>

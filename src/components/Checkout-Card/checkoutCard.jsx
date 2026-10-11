@@ -3,8 +3,7 @@ import { enterAmount } from "../../utils/enterAmount";
 import "./checkoutCard.css"
 
 export function CheckoutCard({ currentOrder, setCurrentOrder, IndexOrderToChange, oneOrder }) {
-    console.log("CheckoutCard   ONE ORDER  ", oneOrder)
-    
+     
     const id = oneOrder.id;
     const title = oneOrder.title;
     const price = oneOrder.price;

@@ -5,8 +5,6 @@ import { BackpackContext } from "../../context/BackpackContext.jsx";
   
 export function Shop() {
 
-    console.log("IN SHOP")
-
     const searchTest = () => {}; //         ?
     const { loadedBackpackInfo } = useContext(BackpackContext)
 

@@ -1,6 +1,5 @@
 export function changeAmount(operator, details, IndexOrderToChange, currentOrder, setCurrentOrder) {
-        console.log("CHANGE AMOUNT   CURRENTORDER ", currentOrder    )
-
+ 
             if (IndexOrderToChange === -1 && operator !== "-") {
                 setCurrentOrder(
                     [...currentOrder, { id: details.id, price: details.price, title: details.title, img: details.img, amount: 1 }]
@@ -31,8 +30,7 @@ export function changeAmount(operator, details, IndexOrderToChange, currentOrder
                 })
                 setCurrentOrder(orderWithAdjustedAmount)
             }
-        console.log(" END OF CHANGE AMOUNT   CURRENTORDER ", currentOrder    )
-        
+         
 }
 
    

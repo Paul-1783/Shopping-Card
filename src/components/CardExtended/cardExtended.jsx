@@ -6,15 +6,11 @@ import { enterAmount } from "../../utils/enterAmount";
 
 export function CardExtended({ currentOrder, setCurrentOrder }) {
     
-    console.log("CardExtended VOR IndexOrderToChange ", currentOrder)
-
-    const { loadedBackpackInfo } = useContext(BackpackContext);
+     const { loadedBackpackInfo } = useContext(BackpackContext);
     const location = useLocation();
     const index = location.state.index;
     const details = loadedBackpackInfo[index];
     let IndexOrderToChange = currentOrder.findIndex(backpack => backpack.id === index);
-
-    console.log("CardExtended   CURRENTORDER ", currentOrder    )
 
     return (
         <>

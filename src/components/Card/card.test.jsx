@@ -7,7 +7,6 @@ describe('Card', () => {
     it("produces img", () => {
         const { getByAltText } = render( <MemoryRouter> <Card product={{"id": 0, "title": "test", "price": 0, "image": "/"}} /> </MemoryRouter>);
         const image = getByAltText("picture 0");
-        console.log(" IMG   " , image)
         expect(image).toHaveAttribute("src", "/")
     })
         

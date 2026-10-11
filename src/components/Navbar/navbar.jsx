@@ -12,6 +12,6 @@ export function Navbar({currentOrder}) {
         <br/>
         <Link className="nav-btn" to="/about">ABOUT</Link>
         </div>
-        <div><span>{currentOrder}</span>    <img src="./public/assets/shopping-cart.jpg" alt="icon of a shopping cart" /></div>
+        <div><span>{currentOrder ? currentOrder.reduce((acc, entry) => acc + entry.amount, 0) : 0}</span>    <img src="./public/assets/shopping-cart.jpg" alt="icon of a shopping cart" /></div>
     </div>
 }
