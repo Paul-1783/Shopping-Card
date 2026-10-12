@@ -1,11 +1,9 @@
-import { useState } from "react"
 
 
-export function Searchbar({setRowView}) {
-    const [searchInput, setSearchInput] = useState("")
+export function Searchbar({handleExtensionView, setSearchInput, searchInput}) {
 
     const clearSearchbar = () => {
-        setSearchInput("")
+        searchInput("")
     }
 
     return (
@@ -13,12 +11,12 @@ export function Searchbar({setRowView}) {
         <div className="search-header" data-testid="searchbar-container">
             <div className="input-panel">
                 <button data-testid="creates grid layout"
-                    onClick={() => {setRowView("false")}}
+                    onClick={() => {handleExtensionView(false)}}
                 >
                     <img src="/assets/grid.svg" alt="grid layout" />
                 </button>
                 <button data-testid="creates row layout"
-                    onClick={() => {setRowView("true")}}
+                    onClick={() => {handleExtensionView(true)}}
                 >
                     <img src="/assets/row.svg" alt="row layout" />
                 </button>
