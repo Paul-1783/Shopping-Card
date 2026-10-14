@@ -8,16 +8,25 @@ export function Shop() {
     const { loadedBackpackInfo } = useContext(BackpackContext);
     const [extension, setExtension] = useState("grid-view");
     const [searchInput, setSearchInput] = useState({searchTerm : "", backpackType: "", criteria: ""});
-    console.log(loadedBackpackInfo)
-    const  handleExtensionView = (decide) => {
-        decide === false ? setExtension("grid-view"): setExtension("row-view");
+
+    
+    function handleExtensionView (decide)  {
+        if(decide === false)
+            setExtension("grid-view");
+        else 
+            setExtension("row-view");
     };
 
     let foundItems = loadedBackpackInfo
-        .map(backPack => {searchInput.backpackType !== "" && backPack.backpackType === searchInput.backpackType})
-        .map(backPack => searchInput.criteria !== "" && backPack.backpackType === searchInput.backpackType)
-        .map(backpack => backpack.title.search(searchInput.searchTerm) !== -1);
+        // .map(backPack => {searchInput.backpackType !== "" && backPack.backpackType === searchInput.backpackType})
+        // .map(backPack => searchInput.criteria !== "" && backPack.backpackType === searchInput.backpackType)
+        .map(backpack => {
+            if(backpack.title.search(searchInput.searchTerm) !== -1)
+                return backpack;
+        });
  
+        // console.log("FOUND ITEMS:   ", foundItems)
+
     return (
         <>
             <Searchbar handleExtensionView={handleExtensionView}  setSearchInput={setSearchInput} searchInput={searchInput} />

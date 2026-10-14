@@ -6,6 +6,10 @@ export function Searchbar({handleExtensionView, setSearchInput, searchInput}) {
         searchInput("")
     }
 
+    const handleChangeInput = () => {
+        setSearchInput(inp => {return {...inp, searchTerm: inp.target.value}})
+    }
+
     return (
         <>
         <div className="search-header" data-testid="searchbar-container">
@@ -21,12 +25,12 @@ export function Searchbar({handleExtensionView, setSearchInput, searchInput}) {
                     <img src="/assets/row.svg" alt="row layout" />
                 </button>
                 <input data-testid="search-input" id="search-input" role="search" type="search" placeholder='Search...' 
-                onChange={inp => setSearchInput(inp.target.value)} value={searchInput} />
+                    onChange={handleChangeInput} value={searchInput} />
                 <button data-testid="clears search bar" id="clear-Searchbar" 
-                onClick={() => {clearSearchbar()}}> 
+                    onClick={() => {clearSearchbar()}}> 
                     <img src="/assets/clear-all.svg" alt="clears search input bar" />
                 </button>
-                <select name="backpack-type" id="backpack-type" data-testid="backpack-type">
+                <select name="backpack-type" id="back pack-type" data-testid="backpack-type">
                     <option value="mountaineering">mountaineering</option>
                     <option value="desert">desert crossing</option>
                     <option value="jungle">rumble in the jungle</option>
