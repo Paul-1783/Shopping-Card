@@ -5,6 +5,8 @@ export const backpackInfo = [
         description: "Did you ever want to feel the appeal of wearing Lederhosen while dancing Gayaneh's saber dance on a bench in a tent in Oktoberfest? This is the backpack to give you an idea of that.",
         img: "./assets/backpack/0.jpg",
         price: 450,
+        backpackType : "work",
+        criteria: "volume",
         features: {
         composition: "denim + suede",
         design: "all over embroidered patches",
@@ -20,6 +22,8 @@ export const backpackInfo = [
         description: "brown Pusta always on you or in your back. Reassuring.",
         img: "./assets/backpack/1.jpg",
         price: 370,
+        backpackType : "work",
+        criteria: "elegance",
         features: {
         composition: "UHMWPE / Dyneema",
         design: "compact, 15–30 L, with a simple main compartment and external pockets.",
@@ -35,6 +39,8 @@ export const backpackInfo = [
         description: "For purposes of authenticity we added little fragments of ivory into the leather.",
         img: "./assets/backpack/2.jpg",
         price: 420,
+        backpackType : "work",
+        criteria: "sturdy",
         features: {
         composition: "Aluminum alloy",
         design: "opens almost completely like a suitcase, useful for organized travel and trekking.",
@@ -50,6 +56,8 @@ export const backpackInfo = [
         description: "Artificial Insemination has created notable demand.",
         img: "./assets/backpack/3.jpg",
         price: 570,
+        backpackType : "work",
+        criteria: "volume",
         features: {
         composition: "Polyester or nylon webbing",
         design: "streamlined 25–40 L design, minimal external features to avoid snagging on rocks or vegetation.",
@@ -65,6 +73,8 @@ export const backpackInfo = [
         description: "it's decoration as well as mean of transport.",
         img: "./assets/backpack/4.jpg",
         price: 300,
+        backpackType : "work",
+        criteria: "cheap",
         features: {
         composition: "Polyester or nylon webbing",
         design: "MOLLE-style or similar attachment points allow additional pouches and equipment to be added.",
@@ -80,6 +90,8 @@ export const backpackInfo = [
         description: "helps to adapt optically to Scotish Highlands and is therefore suited for Nessie Hunters.",
         img: "./assets/backpack/5.jpg",
         price: 400,
+        backpackType : "work",
+        criteria: "cheap",
         features: {
         composition: "Acetal/POM plastic",
         design: "simplified structure and minimal hardware to reduce overall weight.",
@@ -95,6 +107,8 @@ export const backpackInfo = [
         description: "she wants to experience sth. in life, you want to stroke goats.",
         img: "./assets/backpack/6.jpg",
         price: 200,
+        backpackType : "jungle",
+        criteria: "cheap",
         features: {
         composition: "fiberglass and carbon-fiber rods",
         design: "waterproof-oriented design with a roll-down closure instead of a conventional zipper.",
@@ -110,6 +124,8 @@ export const backpackInfo = [
         description: "doesn't give a darn.",
         img: "./assets/backpack/7.jpg",
         price: 450,
+        backpackType : "jungle",
+        criteria: "cheap",
         features: {
         composition: "TPU (thermoplastic polyurethane)",
         design: "streamlined 25–40 L design, minimal external features to avoid snagging on rocks or vegetation.",
@@ -125,6 +141,8 @@ export const backpackInfo = [
         description: "you never know. Afterlife might be a thing after all.",
         img: "./assets/backpack/8.jpg",
         price: 200,
+        backpackType : "jungle",
+        criteria: "elegance",
         features: {
         composition: "TPU (thermoplastic polyurethane)",
         design: "generally 35–60+ L, with a padded hip belt, adjustable torso system, multiple compartments, and substantial load suppor",
@@ -140,6 +158,8 @@ export const backpackInfo = [
         description: "she's a keeper und you tell it best with a backpack as gift.",
         img: "./assets/backpack/9.jpg",
         price: 300,
+        backpackType : "jungle",
+        criteria: "elegance",
         features: {
         composition: "Aluminum alloy",
         design: "has compression/expansion sections allowing its volume to increase when carrying additional equipment.",
@@ -155,6 +175,8 @@ export const backpackInfo = [
         description: "ideal for carrying a micro e-piano.",
         img: "./assets/backpack/10.jpg",
         price: 250,
+        backpackType : "desert",
+        criteria: "elegance",
         features: {
         composition: "EVA foam",
         design: "includes a dedicated reservoir compartment and hose-routing port.",
@@ -170,6 +192,8 @@ export const backpackInfo = [
         description: "you might be  on mission in a second.",
         img: "./assets/backpack/11.jpg",
         price: 650,
+        backpackType : "desert",
+        criteria: "elegance",
         features: {
         composition: "EVA foam",
         design: "uses a suspended mesh panel or shaped padding to create airflow between the user's back and the pack.",
@@ -185,6 +209,8 @@ export const backpackInfo = [
         description: "you don't need a  remover. This bag comprehends all you possess.",
         img: "./assets/backpack/12.jpg",
         price: 650,
+        backpackType : "desert",
+        criteria: "volume",
         features: {
         composition: "Coated or laminated fabric",
         design: "rigid frame remains visible outside the pack; offers strong load support but is less common for modern mountaineering.",
@@ -200,6 +226,8 @@ export const backpackInfo = [
         description: "this is your way out.",
         img: "./assets/backpack/13.jpg",
         price: 350,
+        backpackType : "desert",
+        criteria: "volume",
         features: {
         composition: "Mesh polyester/nylon",
         design: "has a concealed structural frame that transfers weight toward the hips.",
@@ -215,6 +243,8 @@ export const backpackInfo = [
         description: "Party on.",
         img: "./assets/backpack/14.jpg",
         price: 550,
+        backpackType : "desert",
+        criteria: "volume",
         features: {
         composition: "Polypropylene (PP)",
         design: "accessed mainly through a drawstring or roll-top opening; good for carrying vertically organized gear.",
@@ -230,6 +260,8 @@ export const backpackInfo = [
         description: "smells like ethereal oils.",
         img: "./assets/backpack/15.jpg",
         price: 450,
+        backpackType : "desert",
+        criteria: "volume",
         features: {
         composition: "Coated or laminated fabric",
         design: "compact, typically 15–30 L, with a simple main compartment and external pockets.",
@@ -245,6 +277,8 @@ export const backpackInfo = [
         description: "comprehends a handholder for Swiss army knives.",
         img: "./assets/backpack/16.jpg",
         price: 350,
+        backpackType : "mountaineering",
+        criteria: "sturdy",
         features: {
         composition: "Nylon",
         design: "simplified structure and minimal hardware to reduce overall weight.",
@@ -260,6 +294,8 @@ export const backpackInfo = [
         description: "comprehends acoustic boxes for interacting with 3 AIs or more.",
         img: "./assets/backpack/17.jpg",
         price: 250,
+        backpackType : "mountaineering",
+        criteria: "sturdy",
         features: {
         composition: "Acetal/POM plastic",
         design: "reinforced attachment points for trekking poles, ice axes, ropes, helmets, or climbing equipment.",
@@ -275,6 +311,8 @@ export const backpackInfo = [
         description: "comprehends acoustic boxes for interacting with 3 AIs or more.",
         img: "./assets/backpack/18.jpg",
         price: 350,
+        backpackType : "mountaineering",
+        criteria: "sturdy",
         features: {
         composition: "Acetal/POM plastic",
         design: "reinforced attachment points for trekking poles, ice axes, ropes, helmets, or climbing equipment.",
@@ -290,6 +328,8 @@ export const backpackInfo = [
         description: "Nobody knows what it's good for. But they said I need one.",
         img: "./assets/backpack/19.jpg",
         price: 650,
+        backpackType : "mountaineering",
+        criteria: "sturdy",
         features: {
         composition: "Ripstop nylon*",
         design: " waterproof-oriented design with a roll-down closure instead of a conventional zipper.",

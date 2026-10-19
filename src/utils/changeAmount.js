@@ -24,16 +24,6 @@ export function changeAmount(operator, details, IndexOrderToChange, currentOrder
                     console.log("HIER        splice:  ", copyOfCurrentOrder.splice(IndexOrderToChange, 1));
                     setCurrentOrder(copyOfCurrentOrder);
                     
-                    // = currentOrder.map((order, index) => 
-                    //    {                                            
-                    //     if(index !== IndexOrderToChange) 
-                    //         return order;
-                    //     }
-                    // )
-                    // if(typeof ordersWithoutDeletedOrder[0] === 'undefined')
-                    //     setCurrentOrder([]);
-                    // else
-                    //     setCurrentOrder(ordersWithoutDeletedOrder);
                     IndexOrderToChange = -1;
             }
             else if (operator === "-") {
