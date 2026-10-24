@@ -1,0 +1,47 @@
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 3rem auto;
+}
+
+.footer-container  * {
+    margin-top: 0.6rem;
+}
+
+.order-specs{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10dvw, 20dvw)) 1fr;
+}
+
+.order-specs select {
+    max-width: 19dvw;
+    max-height: 2.5rem;
+}
+
+.order-specs img {
+    max-width: 55px;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10dvw, 20dvw)) 1fr;
+}
+
+.help{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10dvw, 20dvw)) 1fr;
+}
+
+.about a, .help a {
+    text-decoration: none;
+}
+
+
+.chat-opt, .portfolio, .email{
+    width: 80%;
+    margin: 0 auto 0 0 ;
+    display: flex;
+    justify-content: space-between;    
+    align-items: center;
+}

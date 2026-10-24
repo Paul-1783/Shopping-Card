@@ -1,0 +1,17 @@
+.input-panel{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.input-panel input,.input-panel select {
+    height: 5dvh;
+    color: var(--text);
+    font-weight: 700;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+}
+
+.input-panel input::placeholder{
+    color: var(--text);   
+}

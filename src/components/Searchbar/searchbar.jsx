@@ -1,4 +1,4 @@
-
+import "./searchbar.css"
 
 export function Searchbar({handleExtensionView, setSearchInput, searchInput, setBackpackType, setCriteria}) {
 
@@ -19,7 +19,7 @@ export function Searchbar({handleExtensionView, setSearchInput, searchInput, set
                     <img src="/assets/grid.svg" alt="grid layout" />
                 </button>
                 <button data-testid="creates row layout" onClick={() => {handleExtensionView(true)}}>
-                    <img src="/assets/row.svg" alt="row layout" />
+                    <img src="/assets/rows.svg" alt="row layout" />
                 </button>
                 <input data-testid="search-input" id="search-input" role="search" type="search" placeholder='Search...' 
                     onChange={(inp) => handleChangeInput(inp.target.value)} value={searchInput.searchTerm} />  
@@ -40,7 +40,6 @@ export function Searchbar({handleExtensionView, setSearchInput, searchInput, set
                     <option value="cheap">for the sensitive purse</option>
                 </select>
             </div>
-            <h3 className="found-products"> BAGS FOUND</h3>
         </div>
         </>
     )

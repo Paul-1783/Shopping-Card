@@ -1,5 +1,6 @@
  
 import { useState } from "react"
+import "./footer.css"
 
 export function Footer(){
       const [emailInput, setEmailInput] = useState("")
@@ -11,9 +12,9 @@ export function Footer(){
 
 
     return(
-        <>
+        <div className="footer">
         <div className="footer-container">
-            <div className="oder-specs">
+            <div className="order-specs">
                 <img src="./assets/rodent.svg" alt="ratpack enterprise logo" />
                 <select name="language-select" id="language-select" data-testid="language-select">
                     <option value="english">English</option>
@@ -25,6 +26,7 @@ export function Footer(){
                     <option value="chinese">中文</option>
                     <option value="russian">русский</option>
                 </select>
+                <span></span>
                 <select name="currency-select" id="currency-select" data-testid="currency-select">
                     <option value="euro">€ Euro(EUR)</option>
                     <option value="ausDollar">$ Australian Dollar</option>
@@ -58,11 +60,13 @@ export function Footer(){
             <div className="ask-specialist">
                 <div>
                     <h3>ASK A RATPACK BACKPACK SPECIALIST</h3>
-                    <span>Chat with us</span> <img src="./assets/chat.svg" alt="chat symbol" />
+                    <div className="chat-opt">
+                        <span>Chat with us</span> <img src="./assets/chat.svg" alt="chat symbol" />
+                    </div>
                 </div>
                 <div>
                     <h3>BE PART OF THE RATPACK BACKPACK COMMUNITY</h3>
-                    <div>
+                    <div className="email">
                         <input type="text" data-testid="email-input"  onChange={inp => setEmailInput(inp.target.value)} value={emailInput} />
                         <button data-testid="email-submit" onClick={() => {clearEmailInput()}}>Submit</button>
                     </div>
@@ -70,11 +74,11 @@ export function Footer(){
             </div>
         </div>
         <div className="portfolio">
-            <h3>Developped By Paul1783</h3>
+            <h3>Developped By <i>Paul1783</i></h3>
             <button data-testid="button leads to git" onClick={() => {}}>
                 <img src="./assets/brand-git.svg" alt="git brand icon" />
             </button>
         </div>
-        </>
+        </div>
     )
 }
