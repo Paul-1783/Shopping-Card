@@ -13,18 +13,18 @@ export function Searchbar({handleExtensionView, setSearchInput, searchInput, set
 
     return (
         <>
-        <div className="search-header" data-testid="searchbar-container">
-            <div className="input-panel">
-                <button data-testid="creates grid layout" onClick={() => {handleExtensionView(false)}}>
+        <div className="search-header" >
+            <div className="input-panel" data-testid="searchbar-container">
+                <button data-testid="creates grid layout" onClick={() => {handleExtensionView(false)}} className="btn searchbar-btn">
                     <img src="/assets/grid.svg" alt="grid layout" />
                 </button>
-                <button data-testid="creates row layout" onClick={() => {handleExtensionView(true)}}>
+                <button data-testid="creates row layout" onClick={() => {handleExtensionView(true)}} className="btn searchbar-btn">
                     <img src="/assets/rows.svg" alt="row layout" />
                 </button>
                 <input data-testid="search-input" id="search-input" role="search" type="search" placeholder='Search...' 
                     onChange={(inp) => handleChangeInput(inp.target.value)} value={searchInput.searchTerm} />  
                 <button data-testid="clears search bar" id="clear-Searchbar" 
-                    onClick={() => {clearSearchbar()}}> 
+                    onClick={() => {clearSearchbar()}} className="btn"> 
                     <img src="/assets/clear-all.svg" alt="clears search input bar" />
                 </button>
                 <select name="backpack-type" id="back pack-type" data-testid="backpack-type" onChange={backpackType => setBackpackType(backpackType.currentTarget.value)}>

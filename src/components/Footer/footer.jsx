@@ -45,20 +45,22 @@ export function Footer(){
                     <option value="usDollar">$ US Dollar (USD)</option>
                 </select>
             </div>
-            <div className="about">
-                <a role="link" className="link-styling" href="/">Team</a>
-                <a role="link" className="link-styling" href="/">Press</a>
-                <a role="link" className="link-styling" href="/">Jobs</a>
+            <div>
+                <div className="about">
+                    <a role="link" className="link-styling" href="/">Team</a>
+                    <a role="link" className="link-styling" href="/">Press</a>
+                    <a role="link" className="link-styling" href="/">Jobs</a>
 
-            </div>
-            <div className="help">
-                <a role="link" className="link-styling" href="/">FAQ</a>
-                <a role="link" className="link-styling" href="/">Contact</a>
-                <a role="link" className="link-styling" href="/">Warrant</a>
-                <a role="link" className="link-styling" href="/">Shipping and Returns</a>
+                </div>
+                <div className="help">
+                    <a role="link" className="link-styling" href="/">FAQ</a>
+                    <a role="link" className="link-styling" href="/">Contact</a>
+                    <a role="link" className="link-styling" href="/">Warrant</a>
+                    <a role="link" className="link-styling" href="/">Shipping and Returns</a>
+                </div>
             </div>
             <div className="ask-specialist">
-                <div>
+                <div className="chat">
                     <h3>ASK A RATPACK BACKPACK SPECIALIST</h3>
                     <div className="chat-opt">
                         <span>Chat with us</span> <img src="./assets/chat.svg" alt="chat symbol" />
@@ -68,14 +70,14 @@ export function Footer(){
                     <h3>BE PART OF THE RATPACK BACKPACK COMMUNITY</h3>
                     <div className="email">
                         <input type="text" data-testid="email-input"  onChange={inp => setEmailInput(inp.target.value)} value={emailInput} />
-                        <button data-testid="email-submit" onClick={() => {clearEmailInput()}}>Submit</button>
+                        <button data-testid="email-submit" onClick={() => {clearEmailInput()}} className="btn">Submit</button>
                     </div>
                 </div>
             </div>
         </div>
         <div className="portfolio">
             <h3>Developped By <i>Paul1783</i></h3>
-            <button data-testid="button leads to git" onClick={() => {}}>
+            <button data-testid="button leads to git" onClick={() => {}} className="btn">
                 <img src="./assets/brand-git.svg" alt="git brand icon" />
             </button>
         </div>

@@ -1,7 +1,11 @@
-.container-gobal {
+.container-global {
     width: 100dvw;
 }
 
+.container-global > h1, .container-global > h3 {
+    text-align: center;
+    margin: 3rem auto;
+}
 
 .grid-view {
     max-width: 10%

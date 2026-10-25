@@ -14,11 +14,9 @@ export function Shop() {
     function handleExtensionView (decide)  {
         if(decide === false)
             setExtension("grid-view");
-        else 
+        else
             setExtension("row-view");
-    };
-
-    console.log("criteria:::  ", criteria)
+    }; 
 
     let foundBackPackFamily = backpackType === "" ? loadedBackpackInfo 
         : loadedBackpackInfo.filter(backPack => backPack.backpackType === backpackType)
@@ -28,9 +26,8 @@ export function Shop() {
 
     let foundItems = searchInput.searchTerm === "" ? criteriaPassedFamily 
         : criteriaPassedFamily.filter(backpack =>  backpack.title.search(searchInput.searchTerm) >= 0);
- 
-    console.log("FOUND ITEMS:   ", foundItems)
 
+ 
     return (
         <>
             <Searchbar handleExtensionView={handleExtensionView}  setSearchInput={setSearchInput} 

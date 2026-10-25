@@ -7,3 +7,20 @@
   margin: 0 auto;
   width: 90%;
 }
+
+.btn {
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+select {
+    width: 200px;
+}
+
+input {
+  width: 200px;
+  height: 40px;
+}

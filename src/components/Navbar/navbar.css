@@ -3,12 +3,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
     gap: 1rem;
     padding: 1rem;
-    flex: 1 2 1;
+    flex-wrap: wrap;
 }
 
-.nav-links{
+.nav-links {
     flex: 1;
     display: flex;
     gap: 1rem;
@@ -16,17 +17,9 @@
 
 }
 
-.nav-links > a{
+.nav-links > a {
     text-decoration: none;
     width: 100%;
-}
-
-@media screen and (width > 650px) {
-    .nav-links{
-         justify-content: space-evenly;
-         flex-direction: row;
-
-    }
 }
 
 #cart-img {
@@ -36,13 +29,19 @@
 .cart-section {
     display: flex;
     align-items: flex-start;
-    width: 100%;
-    justify-content: center;
+    width: 15vw;
+    justify-content: flex-start;
     gap: 0.5rem;
 }
 
-@media screen and (width > 405px) {
+@media screen and (width > 650px) {
     .navbar {
         flex-direction: row;
+    }
+
+    .nav-links{
+         justify-content: space-evenly;
+         flex-direction: row;
+
     }
 }

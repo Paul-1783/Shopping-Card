@@ -1,22 +1,42 @@
+.footer h3{
+    text-align: start;
+}
+
 .footer-container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 3rem auto;
+    margin: 3rem auto 0;
+    padding: 0 1rem;
 }
 
-.footer-container  * {
-    margin-top: 0.6rem;
+.footer-container > * {
+    margin: 0 auto 3rem;
 }
+
+.ask-specialist {
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
 
 .order-specs{
     display: grid;
     grid-template-columns: repeat(3, minmax(10dvw, 20dvw)) 1fr;
 }
 
-.order-specs select {
-    max-width: 19dvw;
-    max-height: 2.5rem;
+@media screen and (width < 600px) {
+    .order-specs select {
+        max-width: 100px;
+        max-height: 2.5rem;
+    }
+
+    .ask-specialist {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
 }
 
 .order-specs img {
@@ -37,11 +57,13 @@
     text-decoration: none;
 }
 
-
 .chat-opt, .portfolio, .email{
     width: 80%;
-    margin: 0 auto 0 0 ;
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-around;    
     align-items: center;
+}
+
+.portfolio {
+    padding: 1rem;
 }
