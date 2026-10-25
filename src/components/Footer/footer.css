@@ -15,9 +15,10 @@
 }
 
 .ask-specialist {
-    width: 90%;
+    width: 80%;
     display: flex;
     justify-content: space-evenly;
+    gap: 1rem;
 }
 
 
@@ -36,6 +37,12 @@
         flex-direction: column;
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+@media screen and  (width > 1300px) {
+    .ask-specialist {
+        width: 100%;
     }
 }
 
@@ -58,12 +65,48 @@
 }
 
 .chat-opt, .portfolio, .email{
-    width: 80%;
     display: flex;
-    justify-content: space-around;    
+    justify-content: space-between;
+}
+
+.email {
+    width: 100%;
+    gap: 1rem
+}
+
+.email-btn {
+    display: flex;
+    justify-content: center;
     align-items: center;
+}
+
+@media screen and (width < 600px) {
+    .email {
+        width: 90%;
+    }
+}
+
+.chat-opt {
+    width: 90%;
+}
+
+.portfolio {
+    width: 85%;
+    margin: 0 auto;
+}   
+
+.credits {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly ;
+}
+
+.chat-opt  * {
+    align-items: flex-start;
 }
 
 .portfolio {
     padding: 1rem;
+    gap: 1rem;
 }
