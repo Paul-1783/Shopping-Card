@@ -9,12 +9,16 @@
     flex-wrap: wrap;
 }
 
+.navbar h1 {
+    margin: 0;
+}
+
 .nav-links {
     flex: 1;
     display: flex;
     gap: 1rem;
     flex-direction: column;
-
+    margin-left: 3rem;
 }
 
 .nav-links > a {
@@ -37,6 +41,7 @@
 @media screen and (width > 650px) {
     .navbar {
         flex-direction: row;
+        align-items: centers;
     }
 
     .nav-links{

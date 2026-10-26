@@ -1,0 +1,20 @@
+
+.home-container img {
+    max-width: 300px;
+    margin-right: 3rem;
+}
+
+.home-container {
+    width: 100dvw;
+    padding: 0 10%;
+}
+
+.home-container p {
+    min-height: 140px;
+    margin: 14rem auto ;
+}
+
+.home-container button {
+    max-width: 50px;
+}
+

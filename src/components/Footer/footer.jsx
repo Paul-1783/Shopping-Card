@@ -69,8 +69,9 @@ export function Footer(){
                 <div>
                     <h3>BE PART OF THE RATPACK BACKPACK COMMUNITY</h3>
                     <div className="email">
-                        <input type="text" data-testid="email-input"  onChange={inp => setEmailInput(inp.target.value)} value={emailInput} />
-                        <button data-testid="email-submit" onClick={() => {clearEmailInput()}} className="btn email-btn">Submit your Email</button>
+                        <input type="text" data-testid="email-input"  onChange={inp => setEmailInput(inp.target.value)} value={emailInput} 
+                        placeholder="Enter your Email"/>
+                        <button data-testid="email-submit" onClick={() => {clearEmailInput()}} className="btn email-btn">Submit Email</button>
                     </div>
                 </div>
             </div>

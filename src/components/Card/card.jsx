@@ -1,4 +1,6 @@
 import { NavLink } from "react-router";
+import "./card.css"
+
 
 export function Card({product}) {
 
@@ -7,15 +9,13 @@ export function Card({product}) {
     const price =product.price ;
     const image = product.image;
      
-
- 
     return (
-        <NavLink  to="/card_extended" state={{index: id}}>
-            <span>{id}</span>
+        <NavLink  to="/card_extended" state={{index: id}} className="card">
             <h3>{title}</h3>
-            <div>
-                <h4>{price}</h4>
+            <div className="quick-views">
                 <img src={image} alt={`picture ${id}`} />
+                <span>Price {price} €</span>
+                <span className="card-id">{id}</span>
             </div>
         </NavLink>
     )

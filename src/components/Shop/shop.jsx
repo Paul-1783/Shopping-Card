@@ -32,10 +32,10 @@ export function Shop() {
         <>
             <Searchbar handleExtensionView={handleExtensionView}  setSearchInput={setSearchInput} 
                 searchInput={searchInput} setBackpackType={setBackpackType} setCriteria={setCriteria}/>
-            <h1>SHOP</h1>
-            <h3 className="found-products"> BAGS FOUND</h3>
-            <div data-testid="item-container" className="item-container">{foundItems.map(product =>
-                <Card key={product.id} className={extension}
+            <h1 className="shop-title">SHOP</h1>
+            <h3 className="found-products">{foundItems.length} Bags Found</h3>
+            <div data-testid="item-container" className={`item-container ` + `global-` + extension}>{foundItems.map(product =>
+                <Card key={product.id} className={+ extension}
                 product={{ "id": product.id, "title": product.title, "price": product.price, "image": product.img }} />
             )}
             </div>

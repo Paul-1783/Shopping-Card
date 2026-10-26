@@ -1,23 +1,30 @@
-*{
+* {
   box-sizing: border-box;
 }
 
+h1, h2, h3 {
+  text-align: center;
+  margin: 3rem auto;
+}
+
+
 .container-global {
-  display: block;
+  /* display: flex;
+  flex-direction: column; */
   margin: 0 auto;
   width: 90%;
 }
 
 .btn {
-  min-width: 40px;
-  min-height: 40px;
+  width: clamp(40px, 50px, 60px);
+  height: clamp(40px, 50px, 60px);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 select {
-    width: 200px;
+  width: 200px;
 }
 
 input {

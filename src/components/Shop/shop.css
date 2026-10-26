@@ -1,16 +1,36 @@
 .container-global {
     width: 100dvw;
+    display: flex;
+    flex-direction: column;
 }
 
-.container-global > h1, .container-global > h3 {
-    text-align: center;
-    margin: 3rem auto;
+.global-grid-view {
+    width: 90%;
+    margin: 0 auto;
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1rem;
 }
 
-.grid-view {
-    max-width: 10%
+.item-container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+@media screen and (width < 650px) {
+    .item-container {
+        margin-left: 20%;
+    }
 }
 
 .row-view {
-    width: 100dvw;
 }
+
+.shop-title, .found-products {
+    margin: 0;
+    margin-bottom:  0.8rem ;
+}
+
+
