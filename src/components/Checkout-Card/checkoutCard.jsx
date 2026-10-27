@@ -16,14 +16,14 @@ export function CheckoutCard({ currentOrder, setCurrentOrder, IndexOrderToChange
             <span>{price}</span>
             <img src={image} alt={`picture ${id}`} />
             <p className="amount-section">
-                <button className="amount-btn" 
+                <button className="amount-btn btn" 
                     onClick={() => { changeAmount("+", {id, title, price, image}, 
                     IndexOrderToChange, currentOrder, setCurrentOrder) }} 
                     >+</button>
                 <input type="text" name="amount" id="amount"
                     value={IndexOrderToChange === -1 ? 0 : currentOrder[IndexOrderToChange].amount}
                     onChange={e => enterAmount(e.target.value, {id, title, price, image}, IndexOrderToChange, currentOrder, setCurrentOrder)} />
-                <button className="amount-btn" 
+                <button className="amount-btn btn" 
                         onClick={() => { changeAmount("-", {id, title, price, image}, 
                         IndexOrderToChange, currentOrder, setCurrentOrder) }}
                     >-</button>

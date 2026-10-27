@@ -23,13 +23,20 @@ img {
 
 .backpack-details{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 4rem;
 }
 
 .backpack-details div {
     max-width: 30dvh;
+    margin: 0;
+    padding: 0;
+
+    & :nth-child(1) {
+        margin-top: 0;
+    }
 }
+
 
 @media screen and (width < 600px) {
     .backpack-details {
@@ -47,9 +54,7 @@ img {
 
 .amount-section input {
     height: clamp(40px, 50px, 60px);
-    display: flex;
-    justify-content: center;
-    align-items: c;
+    
 }
 
 p span {

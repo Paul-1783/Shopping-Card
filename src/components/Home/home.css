@@ -1,20 +1,38 @@
-
-.home-container img {
-    max-width: 300px;
-    margin-right: 3rem;
+h1, h2 {
+    /* margin: 0 auto; */
 }
 
 .home-container {
     width: 100dvw;
     padding: 0 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.home-container p > img {
+    max-width: 300px;
+    margin-right: 3rem;
 }
 
 .home-container p {
+    padding: 1rem;
     min-height: 140px;
-    margin: 14rem auto ;
+    margin: 4rem auto ;
 }
 
 .home-container button {
     max-width: 50px;
 }
 
+.intro-comercial {
+    min-height: 30dvh;
+}
+
+
+@media screen and (width < 630px) {
+    .home-container p > img {
+        margin: 0.5rem;
+    }
+}

@@ -1,4 +1,11 @@
 
 .checkoutCard {
     min-height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#amount {
+    width: clamp(40px, 50px, 60px);
 }
