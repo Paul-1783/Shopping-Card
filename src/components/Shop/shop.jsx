@@ -8,8 +8,8 @@ export function Shop() {
     const { loadedBackpackInfo } = useContext(BackpackContext);
     const [extension, setExtension] = useState("grid-view");
     const [searchInput, setSearchInput] = useState({searchTerm : "", backpackType: "", criteria: ""});
-    const [backpackType, setBackpackType] = useState("");
-    const [criteria, setCriteria] = useState("");
+    const [backpackType, setBackpackType] = useState({value: "default"});
+    const [criteria, setCriteria] = useState({value: "default"});
 
     function handleExtensionView (decide)  {
         if(decide === false)
@@ -18,10 +18,10 @@ export function Shop() {
             setExtension("row-view");
     }; 
 
-    let foundBackPackFamily = backpackType === "" ? loadedBackpackInfo 
+    let foundBackPackFamily = backpackType.value === "default" ? loadedBackpackInfo 
         : loadedBackpackInfo.filter(backPack => backPack.backpackType === backpackType)
 
-    let criteriaPassedFamily = criteria === "" ? foundBackPackFamily 
+    let criteriaPassedFamily = criteria.value === "default" ? foundBackPackFamily 
         : foundBackPackFamily.filter(backPack =>  backPack.criteria === criteria)
 
     let foundItems = searchInput.searchTerm === "" ? criteriaPassedFamily 
@@ -30,8 +30,10 @@ export function Shop() {
  
     return (
         <>
-            <Searchbar handleExtensionView={handleExtensionView}  setSearchInput={setSearchInput} 
-                searchInput={searchInput} setBackpackType={setBackpackType} setCriteria={setCriteria}/>
+            <Searchbar handleExtensionView={handleExtensionView}  
+                setSearchInput={setSearchInput} searchInput={searchInput} 
+                backpackType={backpackType} setBackpackType={setBackpackType} 
+                criteria={criteria} setCriteria={setCriteria}/>
             <h1 className="shop-title">SHOP</h1>
             <h3 className="found-products">{foundItems.length} Bags Found</h3>
             <div data-testid="item-container" className={`item-container ` + `global-` + extension}>{foundItems.map(product =>
