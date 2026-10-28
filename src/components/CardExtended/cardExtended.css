@@ -52,9 +52,12 @@ img {
     justify-content: center;
 }
 
+.amount-section input, .amount-section button {
+    margin: 0;
+}
+
 .amount-section input {
     height: clamp(40px, 50px, 60px);
-    
 }
 
 p span {
