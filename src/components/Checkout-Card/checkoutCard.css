@@ -1,11 +1,59 @@
+button,
+input {
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    max-width: 40px;
+}
 
 .checkoutCard {
     min-height: 100px;
+    width: 90%;
+    margin: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: flex-start;
+}
+
+.order-details {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.checkout-amount-section {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
 }
 
 #amount {
     width: clamp(40px, 50px, 60px);
+}
+
+@media screen and (width < 550px) {
+    .checkoutCard {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       justify-content: space-between;
+    }
+
+    .order-details {
+    display: flex;
+     align-items: center;
+ }
+}
+
+@media screen and (width > 500px) {
+    .checkout-amount-section {
+        display: flex;
+        justify-content: center;
+    }
 }

@@ -1,4 +1,4 @@
-.footer h3{
+.footer h3 {
     text-align: start;
 }
 
@@ -10,7 +10,7 @@
     padding: 0 1rem;
 }
 
-.footer-container > * {
+.footer-container>* {
     margin: 0 auto 3rem;
 }
 
@@ -22,7 +22,7 @@
 }
 
 
-.order-specs{
+.order-specs {
     display: grid;
     grid-template-columns: repeat(3, minmax(10dvw, 20dvw)) 1fr;
 }
@@ -40,7 +40,7 @@
     }
 }
 
-@media screen and  (width > 1300px) {
+@media screen and (width > 1300px) {
     .ask-specialist {
         width: 100%;
     }
@@ -55,16 +55,19 @@
     grid-template-columns: repeat(3, minmax(10dvw, 20dvw)) 1fr;
 }
 
-.help{
+.help {
     display: grid;
     grid-template-columns: repeat(3, minmax(10dvw, 20dvw)) 1fr;
 }
 
-.about a, .help a {
+.about a,
+.help a {
     text-decoration: none;
 }
 
-.chat-opt, .portfolio, .email{
+.chat-opt,
+.portfolio,
+.email {
     display: flex;
     justify-content: space-between;
 }
@@ -90,23 +93,26 @@
     width: 90%;
 }
 
-.portfolio {
-    width: 85%;
-    margin: 0 auto;
-}   
-
 .credits {
     width: 40%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly ;
+    justify-content: space-evenly;
 }
 
-.chat-opt  * {
+.chat-opt * {
     align-items: flex-start;
 }
 
 .portfolio {
+    width: 85%;
+    margin: 0 auto;
     padding: 1rem;
     gap: 1rem;
+}
+
+@media screen and (width < 800px) {
+    .portfolio {
+        justify-content: center;
+    }
 }
