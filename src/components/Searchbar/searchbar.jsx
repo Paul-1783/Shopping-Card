@@ -24,10 +24,6 @@ export function Searchbar({ handleExtensionView, setSearchInput, searchInput, ba
                     </button>
                     <input data-testid="search-input" id="search-input" role="search" type="search" placeholder='Search...'
                         onChange={(inp) => handleChangeInput(inp.target.value)} value={searchInput.searchTerm} />
-                    <button data-testid="clears search bar" id="clear-Searchbar"
-                        onClick={() => { clearSearchbar() }} className="btn">
-                        <img src="/assets/clear-all.svg" alt="clears search input bar" />
-                    </button>
                     <select name="backpack-type" id="backpack-type" data-testid="backpack-type"value={backpackType} onChange={backpackType => setBackpackType(backpackType.currentTarget.value)}>
                         <option value="default">choose backpack type</option>
                         <option value="mountaineering">mountaineering</option>
@@ -42,6 +38,10 @@ export function Searchbar({ handleExtensionView, setSearchInput, searchInput, ba
                         <option value="elegance">winners of this years design contest</option>
                         <option value="cheap">for the sensitive purse</option>
                     </select>
+                    <button data-testid="clears search bar" id="clear-Searchbar"
+                        onClick={() => { clearSearchbar() }} className="btn">
+                        <img src="/assets/clear-all.svg" alt="clears search input bar" />
+                    </button>
                 </div>
             </div>
         </>

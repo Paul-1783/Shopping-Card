@@ -6,16 +6,16 @@ img {
     margin: 5rem auto;
 }
 
-.input-panel{
+.input-panel {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
     flex-wrap: wrap;
-    0 auto 0 6px
 }
 
-.input-panel input,.input-panel select {
+.input-panel input,
+.input-panel select {
     height: 5dvh;
     color: var(--text);
     font-weight: 700;
@@ -23,12 +23,20 @@ img {
     cursor: pointer;
 }
 
-.input-panel input::placeholder{
-    color: var(--text);   
+.input-panel input::placeholder {
+    color: var(--text);
 }
 
-@media screen and (width < 650px ) {
-    .searchbar{
+@media screen and (width < 800px) {
+
+    .searchbar-btn {
+        display: none;
+    }
+}
+
+
+@media screen and (width < 650px) {
+    .searchbar {
         width: 100dvw;
     }
 
@@ -39,8 +47,8 @@ img {
     }
 
     #clear-searchbar {
-      margin-left: 25%;
-      align-self: flex-start;
+        margin-left: 25%;
+        align-self: flex-start;
     }
 
     .input-panel {
@@ -50,9 +58,5 @@ img {
         margin: 0 auto 0 0;
         justify-content: space-evenly;
         height: fit-content;
-    }
-
-     .searchbar-btn {
-        display: none;
     }
 }
