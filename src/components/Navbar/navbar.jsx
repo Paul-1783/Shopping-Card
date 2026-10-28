@@ -14,10 +14,10 @@ export function Navbar({currentOrder}) {
                     <Link className="nav-btn" to="/about">ABOUT</Link>
                 </div>
                 <div className="cart-section">
+                    <img src="./public/assets/shopping-cart.jpg" alt="icon of a shopping cart" id="cart-img" />
                     <span>{currentOrder ? 
                         currentOrder.reduce((acc, entry) => acc + entry.amount, 0) : 0}
                     </span>   
-                    <img src="./public/assets/shopping-cart.jpg" alt="icon of a shopping cart" id="cart-img" />
                 </div>
             </div>
 }

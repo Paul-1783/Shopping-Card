@@ -307,7 +307,7 @@ export const backpackInfo = [
     },
     {
         id: 18,
-        title: "Hacker's delight",
+        title: "The hunting Hacker's delight",
         description: "comprehends acoustic boxes for interacting with 3 AIs or more.",
         img: "./assets/backpack/18.jpg",
         price: 350,

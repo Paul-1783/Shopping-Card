@@ -25,12 +25,17 @@
     }
 }
 
-.row-view {
+.global-row-view {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
 }
 
 .shop-title, .found-products {
     margin: 0;
     margin-bottom:  0.8rem ;
 }
-
-
